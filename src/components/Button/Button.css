@@ -1,0 +1,89 @@
+.btn {
+    border: 1px solid;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        color 0.15s ease;
+}
+
+.btn-solid,
+.btn-raised {
+    border-color: var(--btn-bg-color);
+    background-color: var(--btn-bg-color);
+    color: var(--btn-color);
+}
+
+.btn-solid:hover,
+.btn-raised:hover {
+    border-color: color-mix(in srgb, var(--btn-bg-color) 85%, black);
+    background-color: color-mix(in srgb, var(--btn-bg-color) 85%, black);
+}
+
+.btn-solid:active,
+.btn-raised:active {
+    border-color: color-mix(in srgb, var(--btn-bg-color) 70%, black);
+    background-color: color-mix(in srgb, var(--btn-bg-color) 70%, black);
+}
+
+.btn-outline {
+    border: 1.5px solid;
+    border-color: var(--btn-bg-color);
+    background-color: transparent;
+    color: var(--btn-bg-color);
+}
+
+.btn-outline:hover {
+    background-color: color-mix(in srgb, var(--btn-bg-color) 10%, transparent);
+}
+
+.btn-outline:active {
+    background-color: color-mix(in srgb, var(--btn-bg-color) 20%, transparent);
+}
+
+.btn-raised {
+    box-shadow:
+        0 3px 1px -2px rgba(0, 0, 0, 0.2),
+        0 2px 2px 0 rgba(0, 0, 0, 0.14),
+        0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+    --btn-bg-color: #0d6efd;
+    --btn-color: white;
+}
+
+.btn-secondary {
+    --btn-bg-color: #6c757d;
+    --btn-color: white;
+}
+
+.btn-success {
+    --btn-bg-color: #198754;
+    --btn-color: white;
+}
+
+.btn-warning {
+    --btn-bg-color: #fbc02d;
+    --btn-color: #212529;
+}
+
+.btn-danger {
+    --btn-bg-color: #d32f2f;
+    --btn-color: white;
+}
+
+.btn-basic {
+    border-radius: 10px;
+}
+
+.btn-pill {
+    height: 44px;
+    border-radius: 22px;
+}
