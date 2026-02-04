@@ -14,7 +14,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /** Default Button */
-export const Base: Story = {
+export const Default: Story = {
     args: {
         variant: "solid",
         intent: "primary",
