@@ -5,19 +5,18 @@ type Intent = "primary" | "secondary" | "success" | "warning" | "danger";
 type Shape = "basic" | "pill";
 
 type Props = {
-    /** The style of the button */
+    /** The predefined style variant of the button */
     variant?: Variant;
     /** The intent or severity of the button */
     intent?: Intent;
     /** The shape of the button */
     shape?: Shape;
-    /** Style classes for the button */
-    className?: string;
-    /** The contents of the button */
-    children?: React.ReactNode;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-/** UI component for user interaction with forms, dialogs, and more. */
+/** 
+ * The `<Button>` component is an intereactive element that, once activated, 
+ * performs an action, such as submitting a form or opening a dialog. 
+ */
 export const Button = ({
     type = "button",
     variant = "solid",

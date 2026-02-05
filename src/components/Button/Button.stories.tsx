@@ -13,7 +13,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-/** Default Button */
+/** Default button */
 export const Default: Story = {
     args: {
         variant: "solid",
@@ -23,7 +23,7 @@ export const Default: Story = {
     },
 };
 
-/** These Buttons have a solid background color. */
+/** Buttons with solid background colors */
 export const Solid = {
     render: () => (
         <div style={{ display: "flex", gap: "1rem" }}>
@@ -49,7 +49,7 @@ export const Solid = {
     },
 };
 
-/** These Buttons are have a transparent background with an outline. */
+/** Outlined buttons with transparent backgrounds */
 export const Outline = {
     render: () => (
         <div style={{ display: "flex", gap: "1rem" }}>
@@ -85,7 +85,7 @@ export const Outline = {
     },
 };
 
-/** These Buttons have a subtle shadow to give the appearance of being slightly raised off the page. */
+/** Buttons with subtle shadows to give the appearance of being slightly raised off the page. */
 export const Raised = {
     render: () => (
         <div style={{ display: "flex", gap: "1rem" }}>
@@ -121,7 +121,7 @@ export const Raised = {
     },
 };
 
-/** These Buttons have a rounded pill shape. */
+/** Buttons with rounded pill shapes. */
 export const Pill = {
     render: () => (
         <div style={{ display: "flex", gap: "1rem" }}>
