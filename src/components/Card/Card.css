@@ -5,4 +5,30 @@
         0 1px 5px 0 rgba(0, 0, 0, 0.12);
     border-radius: 10px;
     background-color: white;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 1rem 1rem 0.5rem;
+}
+
+.card-title {
+    margin: 0;
+    padding: 0;
+    color: dimgray;
+}
+
+.card-subtitle {
+    margin: 0;
+    padding: 0;
+    color: darkgray;
+}
+
+.card-content {
+    padding: 0.5rem 1rem;
+    color: gray;
+}
+
+.card-footer {
+    padding: 0.5rem 1rem 1rem;
 }

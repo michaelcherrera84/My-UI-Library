@@ -21,6 +21,22 @@ function CardHeader({ className = "", children, ...props }: React.HTMLAttributes
     );
 }
 
+function CardTitle({ className = "", children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
+    return (
+        <h3 className={`card-title ${className}`} {...props}>
+            {children}
+        </h3>
+    );
+}
+
+function CardSubtitle({ className = "", children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) {
+    return (
+        <h5 className={`card-subtitle ${className}`} {...props}>
+            {children}
+        </h5>
+    );
+}
+
 function CardContent({ className = "", children, ...props }: React.HTMLAttributes<HTMLDivElement>) {
     return (
         <div className={`card-content ${className}`} {...props}>
@@ -39,6 +55,8 @@ function CardFooter({ className = "", children, ...props }: React.HTMLAttributes
 
 export const Card = Object.assign(MainCard, {
     Header: CardHeader,
+    Title: CardTitle,
+    Subtitle: CardSubtitle,
     Content: CardContent,
     Footer: CardFooter,
 });
