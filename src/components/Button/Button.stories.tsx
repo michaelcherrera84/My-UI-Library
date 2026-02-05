@@ -1,12 +1,26 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
 import { Button } from "./Button";
-import { fn } from "storybook/test";
 
 const meta = {
     component: Button,
-    tags: ["autodocs"],
-    args: { onClick: fn() },
+    argTypes: {
+        className: {
+            control: "text",
+            description: "Styles classes for the button",
+            table: {
+                type: { summary: "string" },
+            },
+        },
+        type: {
+            control: "radio",
+            options: ["submit", "reset", "button"],
+            description: "The default behavior of the button",
+            table: {
+                type: { summary: "union" },
+            },
+        },
+    },
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -14,12 +28,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /** Default button */
-export const Default: Story = {
+export const Default: Story = {};
+
+/** Primary button */
+export const Primary: Story = {
     args: {
+        id: "submit",
+        type: "submit",
         variant: "solid",
         intent: "primary",
         shape: "basic",
-        children: "Primary",
+        children: "Submit",
     },
 };
 

@@ -10,15 +10,15 @@ const meta = {
             control: "text",
             description: "Style classes for the input wrapper",
             table: {
-                type: {summary: "string"}
-            }
+                type: { summary: "string" },
+            },
         },
         style: {
             control: "object",
             description: "Inline styles for the input wrapper",
             table: {
-                type: {summary: "ReactCSSProperties"}
-            }
+                type: { summary: "ReactCSSProperties" },
+            },
         },
     },
 } satisfies Meta<typeof Input>;
@@ -32,14 +32,14 @@ export const Default: Story = {};
 
 /** Primary input */
 export const Primary: Story = {
-    args : {
+    args: {
         id: "fname",
         name: "fname",
         variant: "floating",
         placeholder: "First Name",
-        onChange: () => {}
-    }
-}
+        onChange: () => {},
+    },
+};
 
 /** Input with a floating placeholder */
 export const Floating: Story = {

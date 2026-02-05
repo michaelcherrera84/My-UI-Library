@@ -1,0 +1,45 @@
+import { ArgTypes, Canvas, Meta, Title, Subtitle, Description, Primary, Controls, Stories, Story } from '@storybook/addon-docs/blocks';
+
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+The `<Button>` component is an intereactive element that, once activated, performs an action, such as submitting a form or opening a dialog. 
+
+<Canvas of={ButtonStories.Primary} withToolbar={true} />
+
+---
+<br />
+### Default Button
+
+<Canvas of={ButtonStories.Default} />
+<Controls of={ButtonStories.Default} sort={'alpha'} />
+*Attributes for this component include standard `<button` HTML attributes not listed
+
+---
+<br />
+### Solid
+
+Buttons with solid background colors
+
+<Canvas of={ButtonStories.Solid} />
+
+### Outline
+
+Outlined buttons with transparent backgrounds
+
+<Canvas of={ButtonStories.Outline} />
+
+### Raised
+
+Buttons with subtle shadows to give the appearance of being slightly raised off the page.
+
+<Canvas of={ButtonStories.Raised} />
+
+### Pill
+
+Buttons with rounded pill shapes.
+
+<Canvas of={ButtonStories.Pill} />
