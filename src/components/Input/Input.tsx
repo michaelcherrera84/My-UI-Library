@@ -23,7 +23,7 @@ type Props = {
 export const Input = ({
     id,
     variant = "normal",
-    placeholder = "",
+    placeholder,
     className = "",
     style,
     inputClassName = "",

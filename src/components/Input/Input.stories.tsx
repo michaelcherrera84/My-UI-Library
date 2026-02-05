@@ -4,7 +4,23 @@ import { Button } from "../Button/Button";
 
 const meta = {
     component: Input,
-    tags: ["autodocs"],
+    tags: ["!autodocs"],
+    argTypes: {
+        className: {
+            control: "text",
+            description: "Style classes for the input wrapper",
+            table: {
+                type: {summary: "string"}
+            }
+        },
+        style: {
+            control: "object",
+            description: "Inline styles for the input wrapper",
+            table: {
+                type: {summary: "ReactCSSProperties"}
+            }
+        },
+    },
 } satisfies Meta<typeof Input>;
 
 export default meta;
@@ -12,11 +28,18 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /** Default input */
-export const Default: Story = {
-    args: {
-        variant: "normal",
-    },
-};
+export const Default: Story = {};
+
+/** Primary input */
+export const Primary: Story = {
+    args : {
+        id: "fname",
+        name: "fname",
+        variant: "floating",
+        placeholder: "First Name",
+        onChange: () => {}
+    }
+}
 
 /** Input with a floating placeholder */
 export const Floating: Story = {

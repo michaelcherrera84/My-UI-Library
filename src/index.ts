@@ -1,4 +1,5 @@
-import './styles/base.css';
+import "./styles/base.css";
 
-export { Button } from './components/Button/Button';
-export { Input } from './components/Input/Input';
+export { Button } from "./components/Button/Button";
+export { Card } from "./components/Card/Card";
+export { Input } from "./components/Input/Input";

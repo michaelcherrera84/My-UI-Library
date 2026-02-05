@@ -1,0 +1,36 @@
+import { Canvas, Meta, Title, Subtitle, Description, Primary, Controls, Stories, Story } from '@storybook/addon-docs/blocks';
+
+import * as InputStories from './Input.stories';
+
+<Meta of={InputStories} />
+
+# Input
+
+The `<Input>` component is used to create interactive controls for web-based forms in order to accept data from the user.
+
+<Canvas of={InputStories.Primary} withToolbar={true} />
+
+## Props
+Attributes for this component includes standard `<input>` HTML attributes not listed
+
+<Controls of={InputStories.Default} />
+
+## Stories
+<br />
+### Default
+
+Default input
+
+<Canvas of={InputStories.Default} />
+
+### Floating
+
+Input with a floating placeholder
+
+<Canvas of={InputStories.Floating} />
+
+### Form
+
+Sample sign in form with required fields
+
+<Canvas of={InputStories.Form} />
