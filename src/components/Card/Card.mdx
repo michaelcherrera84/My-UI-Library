@@ -1,0 +1,36 @@
+import { ArgTypes, Canvas, Meta, Title, Subtitle, Description, Primary, Controls, Stories, Story } from '@storybook/addon-docs/blocks';
+
+import * as CardStories from './Card.stories';
+
+<Meta of={CardStories} />
+
+# Card
+
+The `<Card>` component is a flexible and extensible content container that includes `<Card.Header>`, `<Card.Title>`, `<Card.Subtitle>`, `<Card.Content>`, and `<Card.Footer>`. 
+
+<Canvas of={CardStories.Primary} withToolbar={true} />
+
+---
+<br />
+### Default Card
+
+<Canvas of={CardStories.Default} />
+<ArgTypes of={CardStories} sort={'alpha'} exclude={'className'} />
+*`<Card>`, `<Card.Header>`, and `<Card.Footer>` each accept standed `<div>` HTML attibutes
+
+---
+<br />
+### Simple
+A simple card with only content
+
+<Canvas of={CardStories.Simple} />
+
+### Header / Footer
+A basic card with a header and footer
+
+<Canvas of={CardStories.HeaderFooter} />
+
+### Severity
+Cards with intents or severities
+
+<Canvas of={CardStories.Severity} />

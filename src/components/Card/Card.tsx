@@ -1,13 +1,31 @@
 import "./Card.css";
 
+type Intent = "none" | "primary" | "secondary" | "success" | "warning" | "danger";
+
 type Props = {
+    /** The height of the card */
     height?: string;
+    /** The width of the card */
     width?: string;
+    /** The intent or severity of the card */
+    intent?: Intent;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-function MainCard({ height = "150px", width = "100px", className = "", style, children, ...props }: Props) {
+function MainCard({
+    height = "fit-content",
+    width = "250px",
+    intent = "none",
+    className = "",
+    style,
+    children,
+    ...props
+}: Props) {
     return (
-        <div className={`card ${className}`} style={{ height: height, width: width, ...style }} {...props}>
+        <div
+            className={["card", `card-${intent}`, className].join(" ")}
+            style={{ height: height, width: width, ...style }}
+            {...props}
+        >
             {children}
         </div>
     );
@@ -53,6 +71,9 @@ function CardFooter({ className = "", children, ...props }: React.HTMLAttributes
     );
 }
 
+/**
+ * The `<Card>` component is a flexible and extensible content container.
+ */
 export const Card = Object.assign(MainCard, {
     Header: CardHeader,
     Title: CardTitle,

@@ -1,34 +1,74 @@
 .card {
+    min-height: 3rem;
     box-shadow:
         0 3px 1px -2px rgba(0, 0, 0, 0.2),
         0 2px 2px 0 rgba(0, 0, 0, 0.14),
         0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border: var(--card-border);
     border-radius: 10px;
-    background-color: white;
+    background-color: var(--card-bg-color);
     overflow: hidden;
 }
 
 .card-header {
     padding: 1rem 1rem 0.5rem;
+    color: var(--card-color);
 }
 
 .card-title {
     margin: 0;
     padding: 0;
-    color: dimgray;
+    color: var(--card-color);
 }
 
 .card-subtitle {
     margin: 0;
     padding: 0;
-    color: darkgray;
+    color: color-mix(var(--card-color), white 40%);
 }
 
 .card-content {
-    padding: 0.5rem 1rem;
-    color: gray;
+    padding: 1rem 1rem;
+    color: color-mix(var(--card-color), white 20%);
 }
 
 .card-footer {
     padding: 0.5rem 1rem 1rem;
+    color: var(--card-color);
+}
+
+.card-none {
+    --card-border: none;
+    --card-bg-color: white;
+    --card-color: dimgray;
+}
+
+.card-primary {
+    --card-border: 2px solid var(--severity-primary);
+    --card-bg-color: rgb(from var(--severity-primary) r g b / 0.2);
+    --card-color: var(--severity-primary)
+}
+
+.card-secondary {
+    --card-border: 2px solid var(--severity-secondary);
+    --card-bg-color: rgb(from var(--severity-secondary) r g b / 0.2);
+    --card-color: var(--severity-secondary);
+}
+
+.card-success {
+    --card-border: 2px solid var(--severity-success);
+    --card-bg-color: rgb(from var(--severity-success) r g b / 0.2);
+    --card-color: var(--severity-success);
+}
+
+.card-warning {
+    --card-border: 2px solid var(--severity-warning);
+    --card-bg-color: rgb(from var(--severity-warning) r g b / 0.2);
+    --card-color: #212529;
+}
+
+.card-danger {
+    --card-border: 2px solid var(--severity-danger);
+    --card-bg-color: rgb(from var(--severity-danger) r g b / 0.2);
+    --card-color: var(--severity-danger);
 }
