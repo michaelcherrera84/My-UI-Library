@@ -1,4 +1,4 @@
-import { Canvas, Meta, Title, Subtitle, Description, Primary, Controls, Stories, Story } from '@storybook/addon-docs/blocks';
+import { Canvas, Meta, Title, Subtitle, Description, Primary, Controls, Stories, Story, ArgTypes } from '@storybook/addon-docs/blocks';
 
 import * as InputStories from './Input.stories';
 
@@ -15,7 +15,7 @@ The `<Input>` component is used to create interactive controls for web-based for
 ### Default Input
 
 <Canvas of={InputStories.Default} />
-<Controls of={InputStories.Default} sort={"alpha"}/>
+<ArgTypes of={InputStories} sort={"alpha"}/>
 *Attributes for this component include standard `<input>` HTML attributes not listed
 
 ---

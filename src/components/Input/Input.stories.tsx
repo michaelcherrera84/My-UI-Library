@@ -20,6 +20,11 @@ const meta = {
                 type: { summary: "ReactCSSProperties" },
             },
         },
+        variant: {
+            table: {
+                type: { summary: "normal | floating"}
+            }
+        }
     },
 } satisfies Meta<typeof Input>;
 
@@ -63,6 +68,12 @@ export const Form = {
         </form>
     ),
     parameters: {
+        controls: {
+            disable: true,
+        },
+        actions: {
+            disable: true,
+        },
         docs: {
             source: {
                 code: `
