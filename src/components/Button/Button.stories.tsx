@@ -17,7 +17,22 @@ const meta = {
             options: ["submit", "reset", "button"],
             description: "The default behavior of the button",
             table: {
-                type: { summary: "union" },
+                type: { summary: "submit | reset | button" },
+            },
+        },
+        intent: {
+            table: {
+                type: { summary: "primary | secondary | success | warning | danger" },
+            },
+        },
+        shape: {
+            table: {
+                type: { summary: "basic | pill" },
+            },
+        },
+        variant: {
+            table: {
+                type: { summary: "solid | outline | raised" },
             },
         },
     },
@@ -28,7 +43,13 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 /** Default button */
-export const Default: Story = {};
+export const Default: Story = {
+    argTypes: {
+        children: {
+            control: "text",
+        },
+    },
+};
 
 /** Primary button */
 export const Primary: Story = {
@@ -54,6 +75,12 @@ export const Solid = {
         </div>
     ),
     parameters: {
+        controls: {
+            disable: true,
+        },
+        actions: {
+            disable: true,
+        },
         docs: {
             source: {
                 code: `
@@ -90,6 +117,12 @@ export const Outline = {
         </div>
     ),
     parameters: {
+        controls: {
+            disable: true,
+        },
+        actions: {
+            disable: true,
+        },
         docs: {
             source: {
                 code: `
@@ -126,6 +159,12 @@ export const Raised = {
         </div>
     ),
     parameters: {
+        controls: {
+            disable: true,
+        },
+        actions: {
+            disable: true,
+        },
         docs: {
             source: {
                 code: `
@@ -162,6 +201,12 @@ export const Pill = {
         </div>
     ),
     parameters: {
+        controls: {
+            disable: true,
+        },
+        actions: {
+            disable: true,
+        },
         docs: {
             source: {
                 code: `

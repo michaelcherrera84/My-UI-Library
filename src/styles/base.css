@@ -1,8 +1,17 @@
 :root {
-     --ui-font-sans: system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --ui-font-sans:
+        system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 body {
     font-family: var(--ui-font-sans);
+
+    /**
+     * severity colors
+     */
+    --severity-primary: #0d6efd;
+    --severity-secondary: #6c757d;
+    --severity-success: #198754;
+    --severity-warning: #fbc02d;
+    --severity-danger: #d32f2f;
 }

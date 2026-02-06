@@ -55,27 +55,28 @@
 }
 
 .btn-primary {
-    --btn-bg-color: #0d6efd;
+    /* --btn-bg-color: #0d6efd; */
+    --btn-bg-color: var(--severity-primary);
     --btn-color: white;
 }
 
 .btn-secondary {
-    --btn-bg-color: #6c757d;
+    --btn-bg-color: var(--severity-secondary);
     --btn-color: white;
 }
 
 .btn-success {
-    --btn-bg-color: #198754;
+    --btn-bg-color: var(--severity-success);
     --btn-color: white;
 }
 
 .btn-warning {
-    --btn-bg-color: #fbc02d;
+    --btn-bg-color: var(--severity-warning);
     --btn-color: #212529;
 }
 
 .btn-danger {
-    --btn-bg-color: #d32f2f;
+    --btn-bg-color: var(--severity-danger);
     --btn-color: white;
 }
 
