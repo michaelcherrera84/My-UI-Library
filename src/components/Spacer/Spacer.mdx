@@ -1,0 +1,15 @@
+import { ArgTypes, Canvas, Meta, Title, Subtitle, Description, Primary, Controls, Stories, Story } from '@storybook/addon-docs/blocks';
+
+import * as SpacerStories from './Spacer.stories';
+
+<Meta of={SpacerStories} />
+
+# Spacer
+
+This is a simple component that simply takes up space. It's helpful in situations when there is a preexisting layout and you need to nudge an an element without changing its styling.
+
+*Note: This functionality is better handled by modern layout controls when creating a new page.*
+
+<Canvas of={SpacerStories.Primary} withToolbar={true} />
+
+<ArgTypes of={SpacerStories} />
