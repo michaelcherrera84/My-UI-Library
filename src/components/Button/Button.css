@@ -55,7 +55,6 @@
 }
 
 .btn-primary {
-    /* --btn-bg-color: #0d6efd; */
     --btn-bg-color: var(--severity-primary);
     --btn-color: white;
 }
