@@ -8,6 +8,7 @@
     border-radius: 10px;
     background-color: var(--card-bg-color);
     overflow: hidden;
+    font-family: var(--ui-font-sans);
 }
 
 .card-header {

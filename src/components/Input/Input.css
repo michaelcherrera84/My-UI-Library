@@ -10,6 +10,7 @@
 .input-wrapper {
     display: inline-block;
     position: relative;
+    font-family: var(--ui-font-sans);
 }
 
 .input-floating {
