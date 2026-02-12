@@ -1,0 +1,28 @@
+.divider {
+    display: flex;
+    align-items: center;
+    font-family: var(--ui-font-sans);
+    color: dimgray;
+}
+
+.divider-horizontal {
+    width: 100%;
+}
+
+.divider-vertical {
+    flex-direction: column;
+    height: 100%;
+}
+
+.divider-line {
+    flex: 1;
+    margin: 5px;
+}
+
+.divider-line-horizontal {
+    border-bottom: 1px solid darkgray;
+}
+
+.divider-line-vertical {
+    border-left: 1px solid darkgray;
+}

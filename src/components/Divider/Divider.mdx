@@ -1,0 +1,41 @@
+import {
+    Canvas,
+    Meta,
+    Title,
+    Subtitle,
+    Description,
+    Primary,
+    Controls,
+    Stories,
+    Story,
+    ArgTypes,
+} from "@storybook/addon-docs/blocks";
+
+import * as DividerStories from "./Divider.stories";
+
+<Meta of={DividerStories} />
+
+# Divider
+
+The `<Divider>` component is used as a separator to group content or represent a thematic break.
+
+<Canvas of={DividerStories.Primary} withToolbar={true} />
+
+---
+<br />
+### Default Divider
+
+<Canvas of={DividerStories.Default} />
+<ArgTypes of={DividerStories} sort={"alpha"} />
+
+### Vertical
+
+Vertical divider with contents
+
+<Canvas of={DividerStories.Vertical} />
+
+### Form
+
+Example of a divider in use with a color, a margin, and styled content
+
+<Canvas of={DividerStories.Form} />
